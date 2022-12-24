@@ -17,8 +17,6 @@ function Row(props) {
         fetchData();
     }, [fetchUrl]);
 
-    console.table(movies);
-
     return (
         <div className='row'>
             <h2>{props.title}</h2>
