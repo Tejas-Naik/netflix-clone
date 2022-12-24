@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import "../Row.css"
+import "../Row.css";
 
 function Row(props) {
     const baseUrl = "https://image.tmdb.org/t/p/original"
@@ -24,10 +24,11 @@ function Row(props) {
             <h2>{props.title}</h2>
             <div className="row__posters">
                 {/* several row__posters */}
-                {movies.map(movie => (
+                {movies.map((movie) => (
                     <img
-                        className="row__poster"
-                        src={baseUrl + movie.poster_path} alt={movie.name} />
+                        key={movie.id}
+                        className={`row__poster ${props.isLargeRow && "row__posterLarge"}`}
+                        src={`${baseUrl}${props.isLargeRow ? movie.poster_path : movie.backdrop_path}`} alt={movie.name} />
                 ))}
             </div>
 
