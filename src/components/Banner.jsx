@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../axios';
 import React, { useEffect, useState } from 'react';
 import "../Banner.css";
 import requests from '../requests';
@@ -58,7 +58,7 @@ function Banner() {
                     backgroundPosition: "center center"
                 }}
             >
-                <div class="banner__contents">
+                <div className="banner__contents">
                     <h1 className="banner__title">{movie?.title || movie?.name || movie?.original_name}</h1>
                     {/* div > 2 buttons */}
                     <div className='banner__buttons'>

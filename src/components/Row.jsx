@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../axios';
 import movieTrailer from 'movie-trailer';
 import React, { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
